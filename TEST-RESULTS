@@ -1,0 +1,70 @@
+Testiranje kalkilatora po metodi black box
+
+Zapazanja: 
+Calculator.java nije projekni fajil
+metodu ToString treba zameniti sa toString
+
+testiranje kalkulataora (black box):
+
+Sabiranje:
+ulaz: 3+3
+izlaz: 6
+tacno
+
+ulaz: 10+100
+izlaz: 110
+tacno
+
+Oduzimanje:
+ulaz: 55-5
+izlaz: 50
+tacno
+
+ulaz: 5-6
+izlaz: -1
+tacno
+
+Mnozenje
+ulaz: 5*10
+izlaz: 50
+tacno
+
+ulaz: 2*0
+izlaz:0
+tacno
+
+Deljenje
+ulaz:50/10
+izlaz:5
+tacno
+
+ulaz:6/0
+izlaz: Error 
+  
+  Jedinicnicni test calkulatora
+  
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CalculatorTest {
+    
+    @Test
+    public void testAdd() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(5, 5);
+        assertEquals(10, result);
+    }
+    
+    @Test
+    public void testSubtract() {
+        Calculator calculator = new Calculator();
+        int result = calculator.subtract(9, 5);
+        assertEquals(4, result);
+    }
+    
+    @Test
+    public void testMultiply() {
+        Calculator calculator = new Calculator();
+        int result = calculator.multiply(4, 4);
+        assertEquals(16, result);
+    }
